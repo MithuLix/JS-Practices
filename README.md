@@ -1,2 +1,2 @@
 # JS-Practices
-A JavaScript-Practice Repository with numerous files. 
+A JavaScript-Practice Repository with numerous files.
