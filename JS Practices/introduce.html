@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>introduce</title>
+    <style>
+    .content{
+        font-family: open sans;
+        width: 350px;
+        height: 500px;
+        border: 5px solid rgb(255, 251, 0);
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 5%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(88, 88, 88);
+    }
+    button{
+        padding: 10px;
+        border: 2px solid yellow;
+        border-radius: 10px;
+        /* margin: 50px; */
+        background-color: rgb(94, 94, 94);
+    }
+    button:hover{cursor: pointer;}
+    #demo{border: 1px solid yellow; border-radius: 5px;background-color: rgb(187, 241, 234);}
+    #none{border: 1px solid yellow; border-radius: 5px;background-color: rgb(187, 200, 241);}
+    #block{border: 1px solid yellow; border-radius: 5px;background-color: rgb(233, 241, 187);}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+    <h2>what can js do?</h2>
+    <p id="demo"> JS can change html contents.</p>
+    <button type="button" onclick='document.getElementById
+    ("demo").innerHTML = "hello js"'>Click me</button>
+
+    <hr>
+
+    <p id="none">JS can hide HTML elements.</p>
+    <button type="button" onclick="document.getElementById
+    ('none').style.display='none'">click me</button>
+
+    <hr>
+
+    <p id="block" style="display: none;">JS can show hidden HTML elements.</p>
+    <button type="button" onclick="document.getElementById
+    ('block').style.display='block'">click me</button>
+    </div>
+
+
+</body>
+</html>

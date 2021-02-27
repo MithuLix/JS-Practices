@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article {
+            border:2px solid tomato;
+            border-radius: 1rem;
+            margin: .5rem;
+            padding:.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Exploring DOM</h2>
+        <article  id="first-article">
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore dolor sequi debitis ducimus molestiae! Dolore culpa eius porro, placeat corporis earum eos odit sequi unde deserunt non asperiores, reiciendis libero.</p>
+        </article>
+        <article  class="query-author">
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Voluptate exercitationem facilis molestiae accusamus vitae quidem! Laudantium asperiores corporis illo ullam rerum deserunt soluta beatae quod quidem animi voluptas tempora perferendis atque, magnam obcaecati! Saepe nostrum neque eligendi debitis.</p>
+        </article>
+        <article  class="query-author">
+            <h3>article-3</h3>
+            <p class="author">author-3</p>
+            <p class="description">Dicta, recusandae! Distinctio vel repudiandae nam iusto. Beatae odio ut quis illum est impedit, id ipsum perspiciatis ea! Velit sint perferendis incidunt hic blanditiis repellat dolor asperiores quasi est numquam!</p>
+        </article>
+
+        <article>
+            <h3>Grocery list</h3>
+            <ul id="giftList">
+                <li>gift item 1</li>
+                <li>gift item 2</li>
+                <li>gift item 3</li>
+                <li>gift item 4</li>
+                <li>gift item 5</li>
+            </ul>
+            
+        </article>
+    </section>
+    <script>
+        var article = document.getElementById('first-article');
+        var newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'this is added by js';
+        article.appendChild(newParagraph);
+        article.style.fontSize = '1rem';
+
+        //add one m,ore gift title
+        const ul = document.getElementById('giftList');
+        const li = document.createElement('li');
+        li.innerHTML = 'gift item 6';
+        ul.appendChild(li);
+
+    </script>
+
+</body>
+</html>

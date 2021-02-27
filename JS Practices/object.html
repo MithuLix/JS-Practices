@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="javascript.ico" type="image/x-icon">
+    <title>JS Objects</title>   
+    <style>
+
+        *{
+             box-sizing: border-box;
+             margin: 0 auto; 
+        }
+
+        .div1   {
+            width: 95%; height: auto; font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 10px; padding: 10px; line-height: 30px; font-size: 15px; margin-left: auto;
+            margin-right: auto; 
+
+        }
+  
+        .example   {
+            background-color: rgb(238, 238, 238); padding: 10px 10px 10px 30px; border-left: 5px solid rgb(255, 153, 0);
+            margin: 10px 0px 30px 30px; color: rgb(0, 110, 255);
+        }
+
+        table  {
+            text-align: left; background-color: rgb(255, 255, 255);
+            width: 100%; border-collapse: collapse; 
+            box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7);
+            margin: 10px 30px 40px 0px; 
+        }
+
+        #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11 {
+            margin-left: 0px; padding-left: 10px;
+        }
+
+        tr, th, td  {
+            padding: 3px 15px 3px 15px; 
+        }
+
+        th  {
+            background-color: rgb(255, 255, 255);
+        }
+
+        tr{
+            background-color: rgb(223, 223, 223);
+        }
+
+        tr:nth-child(even){
+            background-color: rgb(238, 238, 238);
+        }
+
+        h1  {text-align: center; margin-bottom: 25px; color: rgb(255, 153, 0);}
+        h2  {
+            text-align: center; background-color: rgb(255, 255, 255);
+            width: 100%; border-collapse: collapse; padding: 3px;
+            box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7); margin-top: 60px;
+        }
+
+        h2, h3{
+            margin-bottom: 10px; font-weight: 400;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="div1">
+        <h1>JavaScript Objects</h1> 
+        <h3>Real Life Objects, Properties, and Methods</h3>
+        <p>In real life, a car is an <strong>object</strong></p>
+        <p>A car has <strong>Properties</strong> like weigth and color, and <strong>method</strong> like start and stop :</p>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+
+        <script>
+            var car = {type: "'Fiat'", Model: "435", Clolr:"White"}; 
+            document.getElementById("demo").innerHTML = 
+                "The car type is " + car.type;
+        </script>
+        
+        <br><p><strong style="color: rgb(255, 153, 0);">Example</strong></p>
+        <div class="example">Var car = "Fiat"</div>
+
+        <h2>JavaScript Properties</h2>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Property Value</th>
+            </tr>
+            <tr>
+                <td>firstName</td>
+                <td>Jhon</td>
+            </tr>
+            <tr>
+                <td>lastName</td>
+                <td>Doe</td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>eyeColor</td>
+                <td>blue</td>
+            </tr>
+        </table>
+        
+        <h2>Accessing Objects Operators</h2>
+        <p>You can access object properties in 2 ways</p>
+        <div class="example">
+            objectName.propertyName
+            <span style="margin-left: 30px; margin-right: 30px; color: white;">or</span>
+            objectName["propertyName
+        </div>
+
+        <h2>Object Methods</h2>
+        <p>Objects can also have <strong>methods</strong>.Methods are <strong>actions</strong> that can be performed on objects.Methods are stored in properties as <strong>function definitions</strong>.</p>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Property Value</th>
+            </tr>
+            <tr>
+                <td>firatName</td>
+                <td>Mohaiminul</td>
+            </tr>
+            <tr>
+                <td>lastName</td>
+                <td>Islam</td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>eyeColor</td>
+                <td>Black</td>
+            </tr>
+            <tr>
+                <td>fullName</td>
+                <td>function() {return this.firstName + "  " + this.lastName;}</td>
+            </tr>
+        </table>
+
+        <h3><strong>The this Keyword</strong> </h3>
+        <p>In a function definition, this refers to the "owner" of the function.<br>
+            In the example above, this is the person object that "owns" the fullName function.
+            In other words, this.firstName means the firstName property of this object.</p>
+
+
+            <p><strong style="color: rgb(255, 153, 0);">Example</strong></p>
+
+        <div class="example">
+
+            <script>
+                    var a = { fName : "Name : Mithu", lName : "islam", age : "age : 22", email: "Email :  example34@gmail.com", phone :  "phone : 0179708809", favMovies : ["Captain america", "Movie : pirates of silicon valley", " pirates of the carabbian"], living : {city : "Nilphamari", area : "Domar"},
+
+                    salary : function() { return "salary : 70000/-";},
+
+                    fullName : function() { return this.fName + " " + this.lName + " (this object)";}
+                    };
+
+                    document.write(a.fName + " <br> " + a.email + "<br>" + a.favMovies[1] + "<br>" + a.salary() + "<br>" + a.fullName() + "<br>" + " Address : " + a.living.city + ", " + a.living.area);
+
+                    console.log(a);
+
+            </script>
+        </div>
+
+            <!-- Const Variable with Array & Objects -->
+
+            <p><strong style="color: rgb(255, 153, 0);">Example</strong></p>
+            <p>Const Variable with Array & Objects:</p>
+
+        <div class="example">
+            <script>
+
+                const b = [43, 756, 34];
+                    b [1] = 5463;
+                    
+                    console.log(b);
+                    document.write(b);
+
+
+
+                const c = {Name: "Mithu", age: 33};
+                    c.name = "Mohaiminul islam";
+
+                    console.log(c);
+
+            </script>
+        </div>
+
+
+    </div>
+</body>

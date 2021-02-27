@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="javascript.ico" type="image/x-icon">
+        <title>Numbers</title>
+        <style>
+    
+            *{ box-sizing: border-box; margin: 0 auto; }
+    
+            .div1   {
+                width: 95%; height: auto; font-family: Verdana, Geneva, Tahoma, sans-serif;     
+                margin: 10px; padding: 10px; line-height: 30px; font-size: 15px; margin-left: auto;
+                margin-right: auto;  background-color:  #FFFFFF;
+            }
+      
+            .Example{
+                background-color: #F1F1F1; padding: 10px;
+                margin: 30px 0px 30px 0px; height: auto;
+            }
+            .exampleInternal   {
+                background-color:  #FFFFFF; padding: 10px 15px 10px 15px; border-left: 4px solid rgb(255, 153, 0);
+                margin: 15px; color: rgb(0, 110, 255); 
+            }
+    
+            table  {
+                text-align: left; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse;  box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7);
+                margin: 10px 30px 60px 0px; 
+            }
+    
+            .highlights{ width: 100%; height: auto; background-color:rgb(199, 131, 4);padding:10px;}
+    
+            #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11 {
+                margin-left: 0px; padding-left: 10px;}
+    
+            tr, th, td  {padding: 3px 15px 3px 15px; }
+    
+            th  {background-color: rgb(255, 255, 255);}
+    
+            tr{background-color: rgb(223, 223, 223);}
+    
+            tr:nth-child(even){background-color: rgb(238, 238, 238);}
+    
+            h2  {
+                text-align: center; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse; padding: 3px;
+                box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7); 
+            }
+    
+            h2, h3{margin-bottom: 10px; font-weight: 400;}
+    
+            button {width: 100px; height: 25px; background-color: rgb(255, 166, 1);
+                border: none; border-radius: 5px; box-shadow: 0 2px 15px rgba(172, 172, 172, 0.7); }
+       
+    
+        </style>
+</head>
+<body>
+    <div class="div1">
+            <h2>Javascript Numbers</h2>
+            <p>Javascript has only one type of numbers. Numbers can be written with or without decimals.</p>
+            <p>Extra large or extra small numbers can be written with scientific (exponent) notation:</p>
+
+            <div class="Example">
+                <p><strong>Example</strong></p>
+                <div class="exampleInternal">
+                    <p style=color:#B36B00;>with or without decimals.</p>
+                    <p id="demo"></p><hr>
+                    <p style=color:#B36B00;>with scientific (exponent).</p>
+                    <p id="demo1"></p>
+
+                    <script>
+                        var x = 45.54; var y = 45; 
+                        document.getElementById("demo").innerHTML = x + "<br>" + y ;
+
+                        var x = 435e4; var y = 23e2;
+                        document.getElementById("demo1").innerHTML = x + "<br>" + y;
+                    </script>
+                </div>
+            </div>
+                <h3>JavaScript Numbers are Always 64-bit Floating Point</h3>
+                <p>Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point.</p> <p> JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.</p> <p> This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63:</p>
+            <table>
+                <tr>
+                    <th>Value (aka Fraction/Mantissa)</th>
+                    <th>Exponent</th>
+                    <th>Sign</th>
+                </tr>
+                <tr>
+                    <td>52 bits (0 - 51)</td>
+                    <td>11 bits (52 - 62)</td>
+                    <td>1 bit (63)</td>
+                </tr>
+            </table>
+                <h2>Precision</h2>
+                <p>integers (numbers without a period or exponent notation) are accurate up to 15 digits.</p>
+            <div class="Example">
+                <p><strong>Example</strong></p>
+                <div class="exampleInternal">
+                    <p id="demo3"></p>
+                    
+                    <script>
+                        var x = 999999999999999; var y = 9999999999999999999;
+                        document.getElementById("demo3").innerHTML = x + "<br>" + y;
+                    </script>
+                </div>
+                <p>The maximum decimals is 17, floating point arthemetic id not always 100% accurate.</p>
+                <div class="exampleInternal">
+                        <p id="demo4"></p>
+                        
+                        <script>
+                            var x = 0.22 + 0.12;
+                            document.getElementById("demo4").innerHTML = "0.22 + 0.12 = " + x;
+                        </script>
+                    </div>
+            </div>
+
+                <h2>Infinity</h2>
+                <p> <span style="color: red;">Infinity</span>  (or <span style="color: red;">-Infinity</span> ) is the value JavaScript will return if you calculate a number outside the largest possible number.</p> <p>Infinity is a numeric value that represents positive infinity. -Infinity is a numeric value that represents negative infinity. Infinity is displayed when a number exceeds the upper limit of the floating point numbers, which is <span style="color: red;">1.797693134862315E+308.</span></p>
+            
+                <div class="Example">
+                    <p><strong>Example</strong></p>
+                    <div class="exampleInternal">
+                        <p id="demo5"></p>
+
+                        <script>
+                            var num = 5; 
+                            var txt = "";
+                            while (num != Infinity) {
+                                num = num * num;
+                                txt = txt + num + "<br>";
+                            }
+                            document.getElementById("demo5").innerHTML = txt;
+                        </script>
+                    </div>
+                <p><strong>Hexadecimal</strong></p>
+                <p>JS interpreted numeric constants as Hexadecimal if they are proceded by <span style="color: red;">0xBB</span>.</p>
+
+                    <div class="exampleInternal">
+                        <p id="demo6"></p>
+
+                        <script>
+                            var x = 0xBB; 
+                            document.getElementById("demo6").innerHTML = "0xBB = " + x;
+                        </script>
+                    </div>                    
+                </div>
+
+                <h2>Global JavaScript Method</h2>
+                <p>JavaScript global methods can be used on all JavaScript data types. These are the most relevant methods, when working with numbers:</p>
+                <table>
+                   <tr>
+                       <th>Method</th>
+                       <th>Description</th>
+                   </tr>
+                   <tr>
+                       <td>Number()</td>
+                       <td>	Returns a number, converted from its argument.</td>
+                   </tr>
+                   <tr>
+                        <td>parseFloat</td>
+                        <td>Parses its argument and returns a floating point number</td>
+                    </tr>
+                    <tr>
+                        <td>parseInt</td>
+                        <td>Parses its argument and returns an integer</td>
+                    </tr>
+                </table>
+
+                <h2>Number Properties</h2>
+                <table>
+                        <tr>
+                          <th>Property</th>
+                          <th>Description</th>
+                        </tr>
+                        <tr>
+                          <td>MAX_VALUE</td>
+                          <td>Returns the largest number possible in JavaScript</td>
+                        </tr>
+                        <tr>
+                          <td>MIN_VALUE</td>
+                          <td>Returns the smallest number possible in JavaScript</td>
+                        </tr>
+                        <tr>
+                          <td>POSITIVE_INFINITY</td>
+                          <td>Represents infinity (returned on overflow)</td>
+                        </tr>
+                        <tr>
+                          <td>NEGATIVE_INFINITY</td>
+                          <td>Represents negative infinity (returned on overflow)</td>
+                          </tr>
+                        <tr>
+                          <td>NaN</td>
+                          <td>Represents a "Not-a-Number" value</td>
+                        </tr>
+                </table>
+
+                <div class="Example">
+                    <p><strong>Example</strong></p>
+                    <div class="exampleInternal">
+                        <p id="demo7"></p>
+                        <p id="demo8"></p>
+                        <p id="demo9"></p>
+                        <p id="demo10"></p>
+                        <p id="demo11"></p>
+
+                        <script>
+                            var a = Number.MAX_VALUE;
+                            var b = Number.MIN_VALUE;
+                            var c = Number.POSITIVE_INFINITY;
+                            var d = Number.NEGATIVE_INFINITY;
+                            var e = Number.NaN;
+                            document.getElementById("demo7").innerHTML = a + " <span style=color:white;>/ Number.MAX_VALUE";
+                            document.getElementById("demo8").innerHTML = b + " <span style=color:white;>/ Number.MIN_VALUE";
+                            document.getElementById("demo9").innerHTML = c + " <span style=color:white;>/ Number.POSITIVE_INFINITY";
+                            document.getElementById("demo10").innerHTML = d + " <span style=color:white;> / Number.NEGATIVE_INFINITY";
+                            document.getElementById("demo11").innerHTML = e + " <span style=color:white;>/ Number.NaN";
+
+                        </script>
+
+
+                    </div>
+                </div>
+    </div
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="javascript.ico" type="image/x-icon">    
+    <title>Array Methods</title>
+
+    <style>
+
+        *{ box-sizing: border-box; margin: 0 auto; }
+
+        .div1   {
+            width: 95%; height: auto; font-family: Verdana, Geneva, Tahoma, sans-serif;     
+            margin: 10px; padding: 10px; line-height: 30px; font-size: 15px; margin-left: auto;
+            margin-right: auto;  background-color:  #FFFFFF;
+        }
+    
+        .Example{
+            background-color: #F1F1F1; padding: 10px;
+            margin: 30px 0px 30px 0px; height: auto;
+        }
+        .exampleInternal   {
+            background-color:  #FFFFFF; padding: 10px 15px 10px 15px; border-left: 4px solid rgb(72, 255, 0);
+            margin: 15px; color: rgb(0, 110, 255); 
+        }
+
+        table  {
+            text-align: left; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse;  box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7);
+            margin: 10px 30px 60px 0px; 
+        }
+
+        .highlights{ width: 100%; height: auto; background-color:rgb(199, 131, 4);padding:10px; margin: 20px 0px 30px 0px;}
+
+        #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11 {
+            margin-left: 0px; padding-left: 10px;}
+
+        tr, th, td  {padding: 3px 15px 3px 15px; }
+
+        th  {background-color: rgb(255, 255, 255);}
+
+        tr{background-color: rgb(223, 223, 223);}
+
+        tr:nth-child(even){background-color: rgb(238, 238, 238);}
+
+        h2  {
+            text-align: center; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse; padding: 3px;
+            box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7); 
+        }
+
+        h2, h3{margin: 15px 0px 15px 0px; font-weight: 400;}
+
+        button {width: 100px; height: 25px; background-color: rgba(24, 189, 3, 0.829); cursor: pointer;
+            border: none; border-radius: 5px; box-shadow: 0 2px 15px rgba(172, 172, 172, 0.7); 
+        }
+        
+        h1 {text-align: center;padding-bottom: 20px;}
+
+        strong {color: rgb(21, 255, 0);}
+
+        b {color: red; font-weight: 400;}
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>JavaScript Array Methods</h1>
+            <h2>Converting Arrays to Strings</h2>
+            <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+            <div class="Example">
+                <p><strong>Example</strong></p>
+                <div class="exampleInternal">
+                    <p id="demo1"></p>
+                    <p id="demo2"></p>
+
+                    <script>
+                        var fruits = ["Banana", "Mango", "Apple", "Orange"];
+                        document.getElementById("demo1").innerHTML = fruits.toString() + " <span style= color:white;> // toString Method";
+                        document.getElementById("demo2").innerHTML = fruits.join(" + ") + " <span style= color:white;> // Join Method";
+                    </script>
+                </div> 
+            </div>
+            <p>The <b>join()</b> method also joins all array elements into a string.</p>
+            <p> It behaves just like <b>toString()</b> , but in addition you can specify the separator:</p>
+            
+            <h2>Pop, shift, push, unshift, Splice & more..</h2>
+            <ul>
+                <li><p>The <b>pop()</b> method removes the last element from an array.</p></li>
+                <li><p>The <b>push()</b> method adds a new element to an array (at the end).</p></li>
+                <li><p>The <b>shift()</b> method removes the first array element and "shifts" all other elements to a lower index. </p></li>
+                <li><p>The <b>unshift()</b> method adds a new element to an array (at the beginning), and "unshifts" older elements. </p></li>
+                <li><p>The <b>splice()</b> method can be used to add new items to an array</p></li>
+                <li><p>The <b>concat()</b> method creates a new array by merging (concatenating) existing arrays.</p></li>
+                <li><p>The <b>slice()</b> method slices out a piece of an array into a new array.</p></li>
+            </ul>
+            <div class="Example">
+                    <p><strong>Example : </strong> fruits = ["Banana", "Mango", "Apple", "Orange"]</p>
+                    <div class="exampleInternal">
+                        <p id="demo3"></p>
+                        <p id="demo4"></p>
+                        <p id="demo5"></p>
+                        <p id="demo6"></p>
+                        <p id="demo7"></p>
+                        <p id="demo8"></p>
+                        <p id="demo9"></p>
+                        <p id="demo10"></p>
+                        <p id="demo11"></p>
+                        <p id="demo12"></p>
+                        <p id="demo13"></p>
+                        <p id="demo14"></p>
+                        <p id="demo15"></p>
+                        <p id="demo16"></p>
+                        <p id="demo17"></p>
+                        <p id="demo18"></p>
+                        <p id="demo19"></p>
+                        <p id="demo20"></p>
+
+
+
+                        <button onclick="myFu()">Push Method</button>
+                        <button onclick="myFun()">unshift Method</button>
+
+    
+                        <script>
+                            var fruits = ["Banana", "Mango", "Apple", "Orange"];
+                            var fruits1 = ["Banana", "Mango", "Apple", "Orange"];
+                            var fruits2 = ["Banana", "Mango", "Apple", "Orange"];
+                            var fruits3 = ["Banana", "Mango", "Apple", "Orange"];
+                            var fruits4 = ["Banana", "Mango","Apple", "Orange"];
+
+                            document.getElementById("demo3").innerHTML = fruits.pop() + " <span style= color:white;> // Pop Method <b>(removed the last element)</b>";
+                            document.getElementById("demo4").innerHTML = fruits.shift() + " <span style= color:white;> // Shift Method <b>(removed the first array element)</b>";
+
+                            function myFu() {
+                                fruits1.push("pinaapple");
+                            document.getElementById("demo5").innerHTML = fruits1  + " <span style= color:green;> // Push Method (append an element)";
+                            }
+                            function myFun() {
+                                fruits1.unshift("Goava");
+                            document.getElementById("demo6").innerHTML = fruits1  + " <span style= color:green;> // unshift Method ( added new element {Beginning})";
+                            }
+
+                                delete fruits2[0];
+                            document.getElementById("demo7").innerHTML = fruits2 + " <span style= color:white;> // delete Method <b>(Deleted the first array element)</b>";
+                               
+                                fruits3.splice(2, 3, "Lemon", "Ginger");
+                            document.getElementById("demo8").innerHTML = fruits3 + " <span style= color:white;> // Splice Method <b>(Deleted & Added two array element)</b>";
+
+                                var fruits4 = fruits4.concat(fruits1); 
+                            document.getElementById("demo9").innerHTML = fruits4 + "<span style= color:white;> // Concat() Method <b>(Added array element)</b>";
+
+                                var fruits4 = fruits4.slice(3); 
+                            document.getElementById("demo10").innerHTML = fruits4 + "<span style= color:white;> // slice Method <b>(removed 3 array element)</b>";
+                            
+                                var fruits5 = fruits.sort();
+                            document.getElementById = 
+                        </script>
+                    </div> 
+                </div>
+                <p><strong>Changing Elements</strong></p>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KgToLb</title>
+    <style>
+        * {font-size: 1.2rem; padding: .2rem; font-family: open sans;}
+        .container {width: 300px; border: 2px solid gray; background-color: #cfcfcf; text-align: center;}
+        input{margin: .3rem; text-align: right;}
+    </style>
+</head>
+<body>
+    <div class="container" name="container">
+    <h1>Convert Kg to Lb</h1>
+    <input type="number" name="kgs" placeholder="input kg's">
+    <input type="submit" value="Convert" onclick="process()">
+    <input type="number" name="lbs" placeholder="get lb's">
+
+
+    <script>
+
+        function process() {
+            const kgsVal  = parseFloat(document.container.kgs.value);
+            const lbsVal = kgsVal / 2.2;
+            document.container.lbs.value = Math.round(lbsVal);
+        }
+    </script>
+    </div>
+</body>
+</html>

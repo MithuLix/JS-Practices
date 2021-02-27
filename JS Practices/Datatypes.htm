@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="javascript.ico" type="image/x-icon">
+    <title>Data types</title>
+    <style>
+        body    {
+            margin: 20px auto; font-family: 'Open Sans',sans-serif;
+        }
+        .div1   {
+            margin: 10px auto; padding: 3px 20px 10px 20px;
+            text-align: left; background-color: rgb(230, 230, 230);
+            width: 90%; height: auto; border-collapse: collapse;
+            border: 2px solid rgb(165, 165, 165);   
+            box-shadow: 0 2px 15px rgba(172, 172, 172, 0.7); 
+        }
+        h3   {text-align: center; border: 2px solid rgb(55, 211, 250); 
+            background-color: rgb(69, 199, 231); border-radius: 10px;}
+
+    </style>
+</head>
+<body>
+
+        <!-- js numbers -->
+
+    <div class="div1">
+            <h3>JavaScript Numbers</h3>
+            <p>Numbers can be written with, or without decimals;</p>
+            <p id="demo"></p>
+            
+
+            <script>
+                var x = 234, x1 = 1234, x2 = 2314;
+                document.getElementById("demo").innerHTML =
+                    x + "<br>" + x1 + "<br>" + x2;
+            </script>
+
+        <!--  js boolean-->
+
+            <h3>js Boolean</h3>
+            <p>JS can only have two values: "true"  or  "false".</p>
+            <p id="demo2"></p>
+
+            <script>
+            var x = 3332, x1 = 23, x2 = 43e3;
+            document.getElementById("demo2").innerHTML = 
+                (x !== x1) + "<br>" + (x >= x2);
+            </script>
+
+            <!-- javascript Arrays -->
+
+            <h3>Javascript Arrays</h3>
+            <p>Javascript arrays are written with square brackets</p>
+            <p id="demo3"></p>
+
+            <script>
+            var cars = ["volvo", "Audi", "Wolkswagen"];
+            document.getElementById("demo3").innerHTML = 
+                cars[1];
+            </script>
+
+        <!-- javascript Objects -->
+
+            <h3>Javascript Objects</h3>
+            <p>JavaScript objects are are written in Carli braces { }.<br>
+                Object properties are written as name : value pairs, separated by commas.</p>
+            <p id="demo4"></p>
+
+            <script class="we">
+                var person = {
+                    per1 : "Mohaiminul Islam", 
+                    per2 : "Mamun Or Rashid", 
+                    per1Age : 21, 
+                    per2Age : 17,
+                    };
+
+                    document.getElementById("demo4").innerHTML = 
+                        person.per1 + " is " + person.per1Age + " Years old.";
+            </script>
+
+            <!-- null -->
+
+            <h3>Null</h3>
+            <p>In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+                Unfortunately, in JavaScript, the data type of <span style="color: rgb(255, 66, 66);">null</span> is an object.</p>
+                <p id="demo6"></p>
+            <script>
+                var person = {Fname : "Mohaminul", Lname : "islam", age : 21,}; 
+                    person = null;
+                document.getElementById("demo6").innerHTML = typeof person;
+            </script>
+
+
+            
+            
+            
+    </div>
+
+
+    
+</body>
+</html>

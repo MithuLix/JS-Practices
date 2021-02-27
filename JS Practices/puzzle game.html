@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>puzzle game</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .field{
+            font-family: open sans; border: 2px solid yellow;
+            background-color: rgb(97, 97, 97);  text-align: center; border-radius: 10px;
+            margin: 0 auto; margin-top:10%; padding: 10px; width: 300px; height: 400px;
+        }
+        .ghor{
+            width: 90px; height: 90px; border:3px solid rgb(180, 177, 1);
+            border-radius: 10px; float: left; margin: 1px; background-color: rgb(206, 206, 206);
+            font-size: 60px; 
+        }
+        .ghor:hover{cursor: pointer;}
+
+    </style>
+
+    <script src="jquery-3.5.1.min.js"></script>
+
+
+</head>
+<body>
+    
+    <div class="field">
+        <h2>Js game</h2>
+
+        <div class="ghor"></div>
+        <div class="ghor"></div>
+        <div class="ghor"></div>
+
+        <div class="ghor"></div>
+        <div class="ghor" style="color: indianred;"></div>
+        <div class="ghor"></div>
+
+        <div class="ghor"></div>
+        <div class="ghor"></div>
+        <div class="ghor"></div>
+
+    </div>
+
+    <script>
+            $("h2").text("Jquery & Js game");
+            var count =0;
+            $(".ghor").click(function() {
+                count = count+1;
+                if (count%2==0) {
+                    $(this).text(count);
+                }
+                else{
+                    $(this).text("X");
+                }
+
+            })
+    </script>
+</body>
+</html>

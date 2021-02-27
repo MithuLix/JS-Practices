@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>head, body, external js </title>
+    <script src="external.js"></script>
+    <script>
+        window.alert('this is a js alert')
+        function my() {document.getElementById("demo").innerHTML = "paragraph changed"};
+    </script>
+    <style>
+    .con{
+        width: 300px; height: 500px; border-radius: 10px;
+        border: 2px solid yellow; background-color: rgb(224, 224, 224);
+        margin: 0 auto; margin-top: 10%; color: rgb(77, 77, 77); 
+    }
+    .con h2, p{
+        text-align: center; font-family: open sans; align-items: center;
+        text-transform: uppercase;
+    }
+    button{
+        transform: translate(120px); background-color: rgb(233, 230, 51);
+        height: 30px; width: 60px; cursor: pointer; color: white;
+        border: 1px solid yellow; border-radius: 10px;
+    }
+    button:hover{
+        background-color: rgb(255, 255, 255); color: rgb(41, 41, 41);
+    }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h2>a head js </h2>
+        <p id="demo" > a Paragraph</p>
+        <button type="button" onclick="my()">Try it</button>
+
+        <!-- body js -->
+
+        <h2>this is body js</h2>
+        <p id="mim"> A b paragraph</p>
+        <button type="button" onclick="myt()">Try it</button>
+
+        <script> function myt() {document.getElementById
+        ("mim"). innerHTML = "Paragraph b changed.";}</script>
+    
+        <!-- externaljs -->
+    
+        <h2>This is an external js </h2>
+        <p id="mimi">this is a external paragraph</p>
+        <button type="button" onclick="myth()">Try it</button>
+
+    </div>
+
+
+</body>
+</html>

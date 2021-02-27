@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="javascript.ico" type="image/x-icon">
+    <title>Events</title>
+    <style>
+
+        *{ box-sizing: border-box; margin: 0 auto; }
+
+        .div1   {
+            width: 95%; height: auto; font-family: Verdana, Geneva, Tahoma, sans-serif;     
+            margin: 10px; padding: 10px; line-height: 30px; font-size: 15px; margin-left: auto;
+            margin-right: auto;
+        }
+  
+        .example   {
+            background-color: rgb(238, 238, 238); padding: 10px 10px 10px 30px; border-left: 5px solid rgb(255, 153, 0);
+            margin: 10px 0px 30px 30px; color: rgb(0, 110, 255); 
+        }
+
+        table  {
+            text-align: left; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse;  box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7);
+            margin: 10px 30px 60px 0px; 
+        }
+
+        #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11 {
+            margin-left: 0px; padding-left: 10px;}
+
+        tr, th, td  {padding: 3px 15px 3px 15px; }
+
+        th  {background-color: rgb(255, 255, 255);}
+
+        tr{background-color: rgb(223, 223, 223);}
+
+        tr:nth-child(even){background-color: rgb(238, 238, 238);}
+
+        h2  {
+            text-align: center; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse; padding: 3px;
+            box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7); 
+        }
+
+        h2, h3{margin-bottom: 10px; font-weight: 400;}
+
+        button {width: auto; height: 25px; background-color: rgb(255, 136, 1); font-weight: 600;
+            border: none; border-radius: 5px; box-shadow: 0 2px 15px rgba(172, 172, 172, 0.7); }
+   
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+            <h2>Javascript Events</h2>
+            <p>HTML events are "things" that happen to HTML elements.
+                When JavaScript is used in HTML pages, JavaScript can "react" on these events.</p>
+
+            <p><strong>Example</strong></p>
+        <div class="example">
+            <p id="demo"></p>
+            <button onclick="document.getElementById('demo').innerHTML = Date()">
+                the time is?</button><br> <br>
+            <p>Without demo id.</p>
+            <button style="height: 35px;" onclick="this.innerHTML = Date()"> the time is?</button>       
+        </div>
+
+            <p>JavaScript code is often several lines long. It is more common to see event attributes calling functions:</p>
+        <div class="example">
+            <p>Click the button to display the date.</p>
+            <button onclick="displayDate()"> the time is?</button>
+            <script>
+                function displayDate() {
+                    document.getElementById("demo1").innerHTML = Date()
+                }
+            
+            function hello(){
+                alert("Hey! you clicked. Now, get a cup of Coffee & refresh your mind ");
+            }
+            </script>
+            <p id="demo1"></p> <br>
+            <hr>
+            <p>Alert function (onclick & ondblclick, over, out,)</p>
+            <button style= "cursor: pointer;" onclick="hello()">OnClick</button><br>
+            <button style= "cursor: pointer;" onmouseover="hello()">OnMouseOver</button><br>
+            <button style= "cursor: pointer;" onmouseout="hello()">OnMouseOut</button><br>
+            <button style= "cursor: pointer;" onmousewheel="hello()">OnMouseWheel</button><br>
+            <button style= "cursor: pointer;" onkeypress="hello()">OnKeyPress</button><br>
+
+        </div><br>
+
+            <table>
+                <h2>Common HTML Events</h2>
+
+                <tr>
+                    <td>Events</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>onchange</td>
+                    <td>An HTML element has been changed</td>
+                </tr>
+                <tr>
+                    <td>onclick</td>
+                    <td>The user clicks an HTML element</td>
+                </tr>
+                <tr>
+                    <td>onmouseover</td>
+                    <td>The user moves the mouse over an HTML element</td>
+                </tr>
+                <tr>
+                    <td>onmouseout</td>
+                    <td>The user moves the mouse away from an HTML element
+                        </td>
+                </tr>
+                <tr>
+                    <td>onkeydown</td>
+                    <td>The user pushes a keyboard key</td>
+                </tr>
+                <tr>
+                    <td>onload</td>
+                    <td>The browser has finished loading the page</td>
+                </tr>                               
+            </table>
+
+            <h2>What can JavaScript Do?</h2>
+            <p>Event handlers can be used to handle, and verify, user input, user actions, and browser actions:</p>
+
+                <ul>
+                    <li>Things that should be done every time a page loads</li>
+                    <li>Things that should be done when the page is closed</li>
+                    <li>Action that should be performed when a user clicks a button</li>
+                    <li>Content that should be verified when a user inputs data</li>
+                    <li>And more ...</li>
+                </ul>
+            <p>Many different methods can be used to let JavaScript work with events:</p>
+
+                <ul>
+                    <li>HTML event attributes can execute JavaScript code directly</li>
+                    <li>HTML event attributes can call JavaScript functions</li>
+                    <li>You can assign your own event handler functions to HTML elements</li>
+                    <li>You can prevent events from being sent or being handled</li>
+                    <li>And more ...</li>
+                </ul>
+                
+                <script>
+                var er  = 
+                </script>
+    </div>
+</body>
+</html>

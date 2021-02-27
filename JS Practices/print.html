@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>print</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    .con{
+        width: 100%; height: 100%; border-radius: 10px;
+        border: 2px solid yellow; background-color: rgb(224, 224,  224);
+        margin: 0 auto; color: rgb(77, 77, 77);
+        padding: 20px; text-align: justify; 
+        background: #a7d4cc;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, rgb(156, 158, 167), #98c2bb);  /* Chrome 10-25, Safari       5.1-6 */
+        background: linear-gradient(to right, rgb(181, 183, 192), #86b1a9); /* W3C, IE 10+/ Edge, Firefox 16+,      Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    h2{
+        text-align: center; font-family: open sans;
+        color: yellow; padding: 2px;  border-radius: 10px; text-align: center; 
+        
+    }
+    .con p{
+        font-family: open sans; align-items: center;
+        
+    }
+    button{
+        background-color: rgb(233, 230, 51);
+        height: 30px; width: 200px; cursor: pointer; color: white; border-radius: 10px;  text-transform: uppercase;
+        border: 2px solid rgb(159, 255, 5);margin:0 auto;
+    }
+    button:hover{
+        background-color: rgb(255, 255, 255); color: rgb(41, 41, 41);
+
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="con">
+    <h2>This is how print file work</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse mollitia sunt fugit odit blanditiis exercitationem facere alias atque temporibus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi neque vero a odio labore quia sit reiciendis laboriosam, corrupti velit consectetur quasi cupiditate culpa, dolores nemo voluptas aliquid ipsam minus amet perspiciatis mollitia beatae. Maxime voluptate magni delectus, fugit pariatur aspernatur commodi laboriosam recusandae accusamus doloribus, quisquam eum nam eos architecto ducimus quam. Eos est odio natus quas sty <span style="color: rgb(201, 201, 34);"> repellendus</span>  iure ipsum minima assumenda dolorum, dolores eaque quos possimus reprehenderit odit, beatae molestias? Nobis rem nulla ipsum praesentium magni iste explicabo quam quas enim earum. Error dolores ratione labore similique aliquam suscipit sit iste voluptatem, maxime quaerat omnis, eius eum aut cum ipsa enim nemo incidunt quisquam atque eos laudantium explicabo blanditiis <span style="color: rgb(201, 201, 34);">quibusdam</span>. Repellendus, quod mollitia nostrum ipsa laboriosam esse explicabo, architecto voluptate modi dolores est delectus aspernatur alias labore illum cupiditate maiores. Sed accusamus nobis et?.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, sapiente exercitationem fugiat, ut maiores amet, quis harum architecto et esse inventore? Cupiditate, suscipit. <span style="color: rgb(201, 201, 34);">Odio</span>, consequatur. Obcaecati dolore sint est voluptas velit laboriosam eveniet. Quidem ducimus atque itaque dolorem. Non repellendus mollitia animi provident. Veritatis necessitatibus corrupti odit reprehenderit veniam earum.</p>
+    
+    <button onclick="window.print()">Print this page</button>
+    </div>
+</body>
+</html>
