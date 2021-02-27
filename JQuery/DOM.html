@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>jQuery DOM</title>
+</head>
+<body>
+    <h1>Getting Parent HTML Element</h1>
+
+    <h2 id="01">Hello World!</h2>
+    <h2 id="02">Hello Sweden!</h2>
+    <h2 id="03">Hello Japan!</h2>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        //using jQuery
+        $(document).ready(function(){
+            var element = $("#01").parent();
+            $("#demo").text("demo ParentName is:" + element.prop("nodeName"));
+        });
+
+
+        //using javascript
+        var element1 = document.getElementById("02").parentNode;
+        document.getElementById("demo1").innerHTML ="demo1 ParentName is:" + element1.nodeName;
+    </script>
+
+</body>
+</html>

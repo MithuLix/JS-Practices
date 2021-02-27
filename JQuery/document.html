@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="test">
+        <h1 class="heading">jQuery Document</h1>
+        <p id="demo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolor nemo laboriosam maxime corrupti, sunt nostrum dicta saepe aut tenetur delectus minima, eaque totam consectetur consequatur odio necessitatibus veritatis rem.
+        </p>
+        <p id="demo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolor nemo laboriosam maxime corrupti, sunt nostrum dicta saepe aut tenetur delectus minima, eaque totam consectetur consequatur odio necessitatibus veritatis rem.
+        </p>
+        <p id="demo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolor nemo laboriosam maxime corrupti, sunt nostrum dicta saepe aut tenetur delectus minima, eaque totam consectetur consequatur odio necessitatibus veritatis rem.
+        </p>
+        <p id="demo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolor nemo laboriosam maxime corrupti, sunt nostrum dicta saepe aut tenetur delectus minima, eaque totam consectetur consequatur odio necessitatibus veritatis rem.
+        </p>
+        <ul>
+            <li>jamal</li>
+            <li>Kamla</li>
+            <li>Haamla</li>
+        </ul>
+    </div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+       $(document).ready(function () {
+           console.log("hello");
+           var a = $(".test").html()
+           $(".heading").css('border', '2px solid red');
+
+           $('p:nth-child(2)').css('background', 'pink');
+           $('p:gt(2)').css('background', 'orange')
+           $('ul li:odd').css('border', '2px solid pink');
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bom</title>
+    <style>
+        body{ padding:2rem; font-size: 1.1em; font-family: open sans;}
+        button{padding: .6rem .8rem; background-color: #ff6a6a;font-size: 1rem; color: white; font-weight: 600; border: none; cursor: pointer;}
+    </style>
+</head>
+<body onresize="resFunc()">
+    <div>
+        <h1>AJAX</h1>
+        <p>is a developer's dream, because you can:</p>
+        <ul>
+            <li>Read data from a web server - after the page has loaded</li>
+                <li>Update a web page without reloading the page</li>
+            <li>Send data to a web server - in the background</li>
+        </ul>
+    </div>
+    <div>
+        <p>AJAX is not a programming language. AJAX is a technique for accessing web servers from a web page.
+            AJAX stands for Asynchronous JavaScript And XML.
+        </p>
+    </div>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <button onclick="back()">back</button>
+    <button onclick="forward()">forward</button>
+    <script>
+        function resFunc() {
+        console.clear();
+        //innerHeight, innerWidth
+        var iHeight = window.innerHeight;
+        console.log("innerHeight:" + iHeight);
+
+        var iWidth = window.innerWidth;
+        console.log("inneriWidth:" +iWidth);
+
+
+        //outerWidth, outerHeight
+        var oWidth = window.outerWidth;
+        console.log("outerWidth:" +oWidth);
+
+        var oHeight = window.outerHeight;
+        console.log("outerHeight:" +oHeight);
+
+        }
+
+
+        //window ajax
+        function openWindow() {
+        openClose =  window.open("https://www.google.com", "", "width=600px, height=300px, left=200px, top=200px");
+        }
+
+        function closeWindow() {
+            openClose.close();
+        }
+
+        var openClose;
+
+
+        //history ajax
+        function back() {
+            history.back();
+        }
+        function forward() {
+            history.forward();
+        }
+    </script>
+</body>
+</html>

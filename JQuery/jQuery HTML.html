@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>jQuery Selector</title>
+</head>
+<body>
+    <h1>Setting Text Content</h1>
+    <h2 id="01">Hello World!</h2>
+    <h2 id="02">Hello Sweden!</h2>
+
+
+    <script>
+        //using jQuery
+        $(document).ready(function() {
+            var myElement = $("#01");
+            myElement.text("They all prime minister men!");
+        });
+
+
+        //using javascript
+        var myElement1 = document.getElementById("01");
+        myElement1.textContent("They all prime minister men!");
+    </script>
+
+</body>
+</html>
