@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        body {
+            margin: 2%; padding: 1%;
+        }
+        form, .button {
+            margin: 3rem 0; padding: 1rem; border: 1px solid gray;
+            background-color: rgb(236, 236, 236);
+        }
+        form label, select {margin: 1rem;}
+
+        .button button { padding: .4rem; margin: .5rem;}
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Name:<input type="text" name="" id=""></label>
+        <label for="">Pass:<input type="text" name="" id=""></label>
+        <select name="" id="">
+            <option value="">Select Countery</option>
+            <option value="">Bangladesh</option>
+            <option value="">PAkistan</option>
+            <option value="">Nepal</option>
+        </select>
+    </form>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vel.</p>
+    <p>Saepe eligendi nihil laborum nemo. Sapiente maiores repellat eligendi similique!</p>
+    <p>Harum consequatur sint doloribus sit quisquam iure quidem ipsum quis.</p>
+
+    <div class="button">
+        <button onclick="hello()">onclick</button>
+        <button id="changeColor">ondblclick</button>
+    <ul>
+            <li id="li-1">list-1</li>
+            <li class="li-2">list-2</li>
+    </ul>
+    </div>
+
+    <script>
+        document.getElementById("changeColor").addEventListener('ondblclick', function() {
+            document.body.style.color = "green";
+        })
+        document.getElementById("li-1").addEventListener('click', function() {
+            consloe.log("first item clicked");
+            event.stopPropagation();
+        })
+    </script>
+
+</body>
+</html>

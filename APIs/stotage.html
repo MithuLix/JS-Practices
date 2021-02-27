@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <button onclick="myFun()"></button>   
+    <script>
+        //localStorage
+        localStorage.setItem("name", "Jhon Doe");
+        document.getElementById("demo").innerHTML = localStorage.getItem("name")
+        
+        //sessionStorage
+        sessionStorage.setItem("age", 23);
+        document.getElementById("demo2").innerHTML = sessionStorage.getItem("age");
+
+        
+        localStorage.clear();
+    </script>
+</body>
+</html>

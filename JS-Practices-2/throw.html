@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throw</title>
+    <style>
+        * {font-size: 1.2rem; padding: .2rem; }
+        .container {width: 350px; border: 2px solid gray;}
+        input{margin: .3rem;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>try / throw / catch / finally</h1>
+    <p>enter number between 100 to 150 :</p>
+    <input type="number" name="" id="textField">
+    <input type="submit" value="check" id="btnField">
+
+
+    <script>
+        document.getElementById("btnField").addEventListener("click", function() {
+            const  num =  document.getElementById("textField").value;
+
+            try {
+                if (num < 100) {
+                    throw "number is under 100";
+                } else if (num < 150){
+                    throw "number is in 150";
+                }else if (num > 150){
+                    throw "number is out of control";
+                }
+            } catch (error) {
+                console.log(error);
+
+            }
+        })
+    </script>
+    </div>
+</body>
+</html>

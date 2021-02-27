@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>AJAX</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <h1>AJAX</h1>
+        <button type="button" id="fetchBtn" class="btn btn-primary">Fetch Button</button>
+        <button type="button" id="backupBtn" class="btn btn-success">Backup Data</button>
+           <br> <hr><br>
+        <h2>XMLHttpRequest Object Methods</h2>
+        <table class="table table-striped">
+            <tbody><tr>
+              <th style="width:35%">Method</th>
+              <th style="width:90%">Description</th>
+            </tr>
+            <tr>
+              <td>new XMLHttpRequest()</td>
+              <td>Creates a new XMLHttpRequest object</td>
+            </tr>
+            <tr>
+              <td>abort()</td>
+              <td>Cancels the current request</td>
+            </tr>
+            <tr>
+              <td>getAllResponseHeaders()</td>
+              <td>Returns header information</td>
+            </tr>
+            <tr>
+              <td>getResponseHeader()</td>
+              <td>Returns specific header information</td>
+            </tr>
+            <tr>
+              <td>open(<em>method, url, async, user, psw</em>)</td>
+              <td>Specifies the request<em>method</em>: the request type GET or POST
+           <em>url</em>: the file location
+           <em>async</em>: true (asynchronous) or false (synchronous)<em>user</em>: optional user name<em>psw</em>: optional password</td>
+            </tr>
+            <tr>
+              <td>send()</td>
+              <td>Sends the request to the server Used for GET requests</td>
+            </tr>
+            <tr>
+              <td>send(<em>string</em>)</td>
+              <td>Sends the request to the server.Used for POST requests</td>
+            </tr>
+            <tr>
+              <td>setRequestHeader()</td>
+              <td>Adds a label/value pair to the header to be sent</td>
+            </tr>
+          </tbody></table>
+
+          <br><hr><br>
+
+          <h2>XMLHttpRequest Object Methods</h2>
+          <table class="table table-striped">
+            <tbody><tr>
+              <th style="width:35%">Method</th>
+              <th style="width:65%">Description</th>
+            </tr>
+            <tr>
+              <td>new XMLHttpRequest()</td>
+              <td>Creates a new XMLHttpRequest object</td>
+            </tr>
+            <tr>
+              <td>abort()</td>
+              <td>Cancels the current request</td>
+            </tr>
+            <tr>
+              <td>getAllResponseHeaders()</td>
+              <td>Returns header information</td>
+            </tr>
+            <tr>
+              <td>getResponseHeader()</td>
+              <td>Returns specific header information</td>
+            </tr>
+            <tr>
+              <td>open(<em>method, url, async, user, psw</em>)</td>
+              <td>Specifies the request<em>method</em>: the request type GET or POST
+           <em>url</em>: the file location
+           <em>async</em>: true (asynchronous) or false (synchronous)<em>user</em>: optional user name<em>psw</em>: optional password</td>
+            </tr>
+            <tr>
+              <td>send()</td>
+              <td>Sends the request to the serverUsed for GET requests</td>
+            </tr>
+            <tr>
+              <td>send(<em>string</em>)</td>
+              <td>Sends the request to the server.Used for POST requests</td>
+            </tr>
+            <tr>
+              <td>setRequestHeader()</td>
+              <td>Adds a label/value pair to the header to be sent</td>
+            </tr>
+          </tbody></table>
+
+
+          <br><hr><br>
+
+          <h2>XMLHttpRequest Object Properties</h2>
+          <table class="table table-striped">
+            <tbody><tr>
+              <th style="width:35%">Property</th>
+              <th style="width:65%">Description</th>
+            </tr>
+            <tr>
+              <td>onreadystatechange</td>
+              <td>Defines a function to be called when the readyState property changes</td>
+            </tr>
+            <tr>
+              <td>readyState</td>
+              <td>Holds the status of the XMLHttpRequest.
+           0: request not initialized 
+           1: server connection established
+           2: request received 
+           3: processing request 
+           4: request finished and response is ready </td>
+            </tr>
+            <tr>
+              <td>responseText</td>
+              <td>Returns the response data as a string</td>
+            </tr>
+            <tr>
+              <td>responseXML</td>
+              <td>Returns the response data as XML data</td>
+            </tr>
+            <tr>
+              <td>status</td>
+              <td>Returns the status-number of a request200: "OK"403: "Forbidden"404: "Not Found"
+              For a complete list go to the <a href="/tags/ref_httpmessages.asp">Http 
+              Messages Reference</a></td>
+            </tr>
+            <tr>
+              <td>statusText</td>
+              <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+            </tr>
+          </tbody></table>
+    </div>
+
+    <script src="ajax.js"></script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

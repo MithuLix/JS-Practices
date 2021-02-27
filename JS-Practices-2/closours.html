@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closures</title>
+</head>
+<body>
+    <h1>closures</h1>
+    <button onclick="fun()">Count...</button>
+    <p id="demo"></p>
+    <script>
+            var add = (function() {
+            var counter = 0;
+                return function () {counter += 1; return counter;}
+        })()
+        
+        function fun() {
+            document.getElementById('demo').innerHTML = add();
+        }
+
+
+
+
+        const outerFun = (a) => {
+            let b  = 11;
+            const innerFun = () => {
+                let sum = a + b;
+                console.log(`the sum of two no. is ${sum}.`);
+            }
+            return innerFun;
+        }
+        let xr = outerFun(45);
+        console.dir(xr);
+        xr()
+    </script>
+    <img src="" alt="" srcset="">
+</body>
+</html>

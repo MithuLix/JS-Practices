@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>errors</title>
+</head>
+<body>
+    <script>
+        try {
+        console.log('start of try runs');
+            unicycle();
+        console.log('end of try runs never reached');
+        } catch (error) {
+            console.log(error);
+        }finally {
+            console.log('this is always run');
+        }
+        console.log('.. then the execution continues');
+    </script>
+</body>
+</html>

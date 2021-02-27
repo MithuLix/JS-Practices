@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history back() / Previous()</title>
+</head>
+<body>
+    <button onclick="myFunc()">Back</button>
+    <button onclick="myFunc1()">Back 2 Pages</button>
+    <button onclick="myFunc2()">Previous</button>
+
+    <script>
+        function myFunc() {
+            window.history.back();
+        }
+
+        //back 2 pages
+        function muFunc1() {
+            window.history.go(-2);
+        }
+
+        function muFunc2() {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>
