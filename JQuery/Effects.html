@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="effects.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        .container {margin-top: 1rem;}
+        .fadeEffects {height: 30px;}
+        .div3, .div4, .div5 {float: left; display: none;  margin: .5rem; width: 200px; height: 50px; background-color: #7dd138;}
+        .div8 { margin: .5rem; width: 200px; height: 100px; background-color: #79e048;}
+        .div9 { color: white; margin: .5rem; padding: .3rem; width: 300px; height: 100px; background-color: #79cc1b;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="div1">
+            <button id="hide_me" class="btn btn-success">Hide para1</button>
+            <button id="show_me" class="btn btn-success">Show para1</button>
+            <button id="fade_para2" class="btn btn-success" >Fade para2</button>
+        </div><br>
+    
+    
+        <div class="div2">
+            <p id="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni inventore, porro facere tenetur at deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium quis ducimus debitis quo cumque magni, quibusdam in maiores perspiciatis iusto nulla quaerat aspernatur possimus, delectus rerum accusamus pariatur deserunt.</p>
+            <p id="para2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni inventore, porro facere tenetur at deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium quis ducimus debitis quo cumque magni, quibusdam in maiores perspiciatis iusto nulla quaerat aspernatur possimus, delectus rerum accusamus pariatur deserunt.</p>
+        </div><hr>
+    
+    
+    
+        <!-- fade function -->
+        <button id="fadeIn" class="btn btn-success">fadeIn</button>
+        <button id="fadeOut" class="btn btn-success">fadeOut</button>
+        <div class="fadeEffects">
+            <div class="div3"></div>
+            <div class="div4"></div>
+            <div class="div5"></div>
+        </div><br>
+        <hr>
+    
+    
+    
+    
+        <!-- slide function -->
+        <div class="div6">
+            <button id="slideUp" class="btn btn-success">Click to slide up para3</button>
+            <button id="slideDown" class="btn btn-success">Click to slide down para3</button>
+            <button id="slideToggle" class="btn btn-success">Click to slide toggle para3</button>
+            <br><br>
+            <p id="para3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni inventore, porro facere tenetur at deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium quis ducimus debitis quo cumque magni, quibusdam in maiores perspiciatis iusto nulla quaerat aspernatur possimus, delectus rerum accusamus pariatur deserunt.</p>
+        </div><hr>
+    
+    
+    
+        <!-- animate method -->
+        <div class="div7">
+            <button id="Queue" class="btn btn-success">Click to Queue  Animate 1</button>
+            <button id="Queue2" class="btn btn-success">Click to Queue  Animate 2</button><br>
+    
+            <div class="div8 float-start"></div>
+            <div class="div9 float-end">second animate</div>
+        </div>
+        <br><br><br><br><br><hr>
+
+        
+        <div class="div10"> 
+            <button id="start_animate" class="btn btn-success">Start Animate</button>
+            <button id="stop_animate" class="btn btn-success">Stop Animate</button>
+            <br><br>
+            <p id="para4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni inventore, porro facere tenetur at deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium quis ducimus debitis quo cumque magni, quibusdam in maiores perspiciatis iusto nulla quaerat aspernatur possimus, delectus rerum accusamus pariatur deserunt.</p>
+        </div><br>
+    
+
+        <!-- callback method -->
+        <div class="div11">
+            <button id="callback" class="btn btn-success">Callback</button><br><br>
+            <p id="para5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni inventore, porro facere tenetur at deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium quis ducimus debitis quo cumque magni, quibusdam in maiores perspiciatis iusto nulla quaerat aspernatur possimus, delectus rerum accusamus pariatur deserunt.</p>
+        </div>
+
+
+
+        <!-- Chaining method -->
+        <button id="chain" class="btn btn-success">Chaining</button><br><br>
+        <p id="para6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni inventore, porro facere tenetur at deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias accusantium quis ducimus debitis quo cumque magni, quibusdam in maiores perspiciatis iusto nulla quaerat aspernatur possimus, delectus rerum accusamus pariatur deserunt.</p>
+
+
+    
+    </div>
+</body>
+</html>

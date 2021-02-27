@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>jQuery CSS</title>
+</head>
+<body>
+    <h1>Getting Text Content</h1>
+
+    <h2 id="01">Hello World!</h2>
+    <h2 id="02">Hello Sweden!</h2>
+    <h2 id="03">Hello Japan!</h2>
+    <h2 id="04" style="display: none;">Hello USA!</h2>
+    <h2 id="05" style="display: none;">Hello AUSTRALIA!</h2>
+    <h2 id="06">Hello CANADA!</h2>
+
+    <p id="demo"></p>
+    <p id="demo2">JavaScript can change the style of an HTML element.</p>
+    <p id="demo3">JavaScript can change the style of an HTML element.</p>
+
+    <script>
+
+        //Hiding HTML Elements
+        //using jQuery
+        $(document).ready(function(){
+            var myElement = $("#01");
+            myElement.hide();
+        });
+
+        //using javascript
+        var myElement1 = document.getElementById("02").style.display = "none";
+    
+    
+    
+        // Showing HTML Elements
+        //using jQuery
+        $(document).ready(function(){
+            var myElement2 = $("03");
+            myElement2.show();
+        })
+
+        //using javascript
+        var myElement1 = document.getElementById("04");
+        myElement2.style.display = block;
+
+
+   
+        // Styling HTML Elements
+        //using jQuery
+        $(document).ready(function(){
+            var myElement3 = $("#demo2");
+            myElement3.css("font-size", "50px");
+        });
+ 
+        //using jQuery
+        var myElement4 = document.getElementById("#demo3");
+        myElement4.style.fontSize = "40px"
+    
+    
+    </script>
+</body>
+</html>

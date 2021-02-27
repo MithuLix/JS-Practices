@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Selector</title>
+</head>
+<body>
+    <h2>Finding HTML Elements by Id</h2>
+
+    <p id="id01">Hello World!</p>
+    <p id="id02">Hello Sweden!</p>
+    <p id="id03">Hello Japan!</p>
+    <p id="id03">Hello Japan!</p>
+    <p id="id04">Hello Japan!</p>
+    <p id="id05">Hello Japan!</p>
+
+    <p class="intro">Hello World!</p>
+    <p class="intro">Hello Sweden!</p>
+    <p class="intro">Hello Japan!</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5 "></p>
+        
+    <p class="class"></p>
+    <p class="class1"></p>
+    <p class="class2"></p>
+    <p class="class3"></p>
+    <p class="class4"></p>
+
+
+    <script>
+        //JavaScript Selector
+        var elem = document.getElementById("id01");
+        document.getElementById("demo").innerHTML = "he text from the id01 paragraph is: " + elem.innerHTML;
+
+
+        //Jquery Selector
+        $(document).ready(function() {
+            var Elem = $("#id01");
+            $("demo1").text("the text from the id01 paragragph is:" + Elem[0].innerHTML)
+        });
+
+
+        //Finding HTML Elements by Class Name
+        $(document).ready(function () {
+            var a = $(".intro");
+            $("#demo2").text("the text from the id01 paragragph is:" + a[0].innerHTML);
+        });
+
+
+        var b = document.getElementsByClassName("class3");
+        document.getElementById("#demo2").innerHTML = "the text from the id01 paragragph is:" + b[0].innerHTML;
+
+
+
+        // Finding HTML Elements by CSS Selectors
+        $(document).ready(function () {
+            var myElement = $("p.intro");
+            $("#demo").text("the text from the id01 paragragph is:" + myElement[0].innerHTML);
+        });
+        var myElement = document.querySelectorAll("p.intro");
+        document.getElementById("demo").innerHTML = "the text from the id01 paragragph is:" + myElement[0].innerHTML;
+
+
+    </script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>

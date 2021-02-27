@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+    <style>
+        body { padding-bottom: 10rem;}
+        #container {
+        width: 400px;
+        height: 100px;
+        position: relative;
+        background: yellow;
+        }
+        #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+        }
+        .Html_event {
+            background-color: #ffaaaa;
+            width: 300px; height: 50px; 
+            padding: .5rem; font-size: 2rem;
+            margin: 1rem;
+        }
+        .Html_event2 {
+            background-color: gray;
+            width: 300px; height: 50px; 
+            padding: .5rem; font-size: 2rem;
+            margin: 1rem;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="h1">Dom_Bom</h1>
+    <h2 onclick="this.innerHTML='Ooops'">Click on the text</h2>
+
+
+    <button onclick="displayDate()">The Time is?</button>
+    <p id="d"></p>
+
+
+
+    <p><button onclick="myMove()">Click Me</button></p> 
+    <div id ="container">
+      <div id ="animate"></div>
+    </div>
+    
+
+
+    <div class="Html_event" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over me</div>
+    <div class="Html_event2" onmousedown="mDown(this)" onmouseup="mUp(this)">Click me</div>
+
+
+
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+
+
+         <!-- event listner -->
+     <button id="myBtn2">mouseOver/ Out/ Clicked</button>
+    <p id="d2"></p>
+    <p id="d3"></p>
+
+    
+    <button id="myBtn4">Try it</button>
+    <p id="d4"></p>
+
+
+
+    <!-- add remove -->
+    <div id="div3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+     </div>
+
+
+
+
+    <script src="dom.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>event Method</title>
+</head>
+<body>
+    <div>
+        <h1>event Method</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime explicabo a vitae dicta. Quidem et ea esse inventore, amet voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptate aliquam error ab tempore aliquid ipsum autem repellendus eos harum?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptate aliquam error ab tempore aliquid ipsum autem repellendus eos harum?</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $('p').on({
+                click: function() {$(this).css('background', 'pink')},
+                mouseenter : function() {$(this).hide('')},
+                mouseleave : function() {$(this).show('')},
+            });
+
+            $('div').click(function () {$(this).css('background', 'lightblue')});
+
+            $('h1').click(function(){$(this).css('color', 'red')});
+        })
+    </script>
+</body>
+</html>
